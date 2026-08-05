@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Open on purpose — portfolio project, no auth layer (see docs/SPEC.md).
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+  }
+}

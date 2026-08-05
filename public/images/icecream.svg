@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240">
+  <rect width="320" height="240" fill="#a5478f" />
+  <rect x="8" y="8" width="304" height="224" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" />
+  <text x="160" y="128" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="28" fill="#fff" text-anchor="middle">バニラアイス</text>
+</svg>

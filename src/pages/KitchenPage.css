@@ -1,0 +1,128 @@
+.kitchen-login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f1a16;
+}
+
+.kitchen-login__form {
+  background: var(--color-surface);
+  padding: 32px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+}
+
+.kitchen-login__form h1 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.kitchen-login__form input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.kitchen-login__error {
+  color: var(--color-primary);
+  font-size: 13px;
+  margin: 0;
+}
+
+.kitchen-page {
+  min-height: 100%;
+  background: #1f1a16;
+  color: #f4ece0;
+  padding: 16px 20px 40px;
+}
+
+.kitchen-page__header {
+  margin-bottom: 16px;
+}
+
+.kitchen-page__header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.kitchen-page__section {
+  margin-bottom: 24px;
+}
+
+.kitchen-page__section--done {
+  opacity: 0.7;
+}
+
+.kitchen-page__section h2 {
+  font-size: 15px;
+  color: #cbb99f;
+  margin: 0 0 10px;
+}
+
+.kitchen-page__empty {
+  color: #a89685;
+}
+
+.kitchen-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.ticket {
+  background: #2a231d;
+  border-radius: 10px;
+  padding: 14px;
+  border-left: 6px solid var(--color-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket--pending {
+  border-left-color: var(--color-primary);
+}
+
+.ticket--cooking {
+  border-left-color: var(--color-accent);
+}
+
+.ticket--done {
+  border-left-color: var(--color-success);
+}
+
+.ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ticket__table {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ticket__status {
+  font-size: 12px;
+  color: #cbb99f;
+}
+
+.ticket__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket__action {
+  margin-top: 4px;
+}

@@ -1,0 +1,119 @@
+:root {
+  --color-bg: #fbf3e6;
+  --color-surface: #ffffff;
+  --color-text: #2c2018;
+  --color-muted: #7a6a58;
+  --color-border: #e6d8c3;
+  --color-primary: #b3261e;
+  --color-primary-dark: #8c1f18;
+  --color-accent: #d98a2b;
+  --color-success: #2f6b52;
+  --color-soldout: #9c9086;
+  --shadow-card: 0 2px 8px rgba(44, 32, 24, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+    "Yu Gothic", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:disabled {
+  background: var(--color-soldout);
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-muted);
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-text);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  box-shadow: var(--shadow-card);
+  z-index: 1000;
+  animation: toast-in 0.2s ease-out;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.error-screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  gap: 8px;
+}
+
+.error-screen h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.error-screen p {
+  color: var(--color-muted);
+  margin: 0;
+}
