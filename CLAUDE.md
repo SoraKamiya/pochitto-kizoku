@@ -90,8 +90,9 @@ per order document, not per table.
 - **Kitchen auth is a hardcoded password check, client-side only**, persisted so the device isn't
   re-prompted (shared-tablet assumption). It is not real security; don't build session/token
   infrastructure around it.
-- **Cart is not cleared after order confirmation.** This is intentional — the cart list doubles as
-  the running tab shown on `/history`. Clearing it on order would break the history feature.
+- **Cart is cleared after order confirmation.** `/history` reads from its own separate localStorage
+  log (appended to on each confirmed order), not from the live cart, so clearing the cart doesn't
+  affect the running tab shown there.
 - **`done` orders are archived, not deleted or hidden.** Kitchen screen needs a visible
   "completed" section, not a filter that removes them from the UI entirely.
 - **Table tokens and menu items are static.** There is no dynamic token generation, no menu CRUD —

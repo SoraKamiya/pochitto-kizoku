@@ -127,6 +127,7 @@ export default function OrderPage() {
       });
 
       appendHistory({ items, totalPrice, createdAt: Date.now() });
+      setCart([]);
       setConfirmOpen(false);
       setIsCartOpen(false);
       setToast("ご注文を承りました");
