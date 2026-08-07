@@ -26,5 +26,8 @@ jobs:
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
-      - name: Deploy to Firebase Hosting + Firestore rules
-        run: npx firebase-tools@13 deploy --only hosting,firestore:rules --project pochitto-kizoku
+      # Firestore rules are managed manually via the Firebase console for now —
+      # the service account needs the Firebase Rules Admin role to deploy them
+      # from CI too; add `,firestore:rules` back to --only once that's granted.
+      - name: Deploy to Firebase Hosting
+        run: npx firebase-tools@13 deploy --only hosting --project pochitto-kizoku
